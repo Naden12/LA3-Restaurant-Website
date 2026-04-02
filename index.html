@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="src/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="bg-white dark:bg-gray-900 text-black dark:text-white">
+
+<!-- Navbar -->
+<nav class="flex justify-between p-5 shadow">
+  <h1 class="text-xl font-bold">🍔 My Restaurant</h1>
+  <div class="space-x-4">
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="text-center py-20">
+  <h2 class="text-4xl font-bold">Delicious Food 🍕</h2>
+  <p class="mt-4">Best food in your city</p>
+</section>
+
+<!-- Toggle Dark Mode -->
+<div class="text-center">
+  <button onclick="toggleDark()" class="bg-black text-white px-4 py-2 rounded">
+    Toggle Dark Mode
+  </button>
+</div>
+
+<script>
+function toggleDark() {
+  document.documentElement.classList.toggle('dark');
+}
+</script>
+
+</body>
+</html> 
