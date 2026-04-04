@@ -7,25 +7,163 @@
     <link rel="stylesheet" href="src/output.css">
 </head>
 
-    <body class="bg-white dark:bg-gray-900 text-black dark:text-white">
 
-<h1 class="text-3xl text-center mt-10">Menu</h1>
+<body class="bg-[#f4f4f4] font-sans">
 
-<div class="grid grid-cols-1 md:grid-cols-3 gap-6 p-10">
+<!-- TITLE -->
+<section class="text-center py-10">
+  <h1 class="text-3xl tracking-widest text-gray-800">OUR MENU</h1>
+  <div class="w-32 h-2px bg-yellow-700 mx-auto mt-4"></div>
+</section>
 
-  <div class="border p-5 rounded">
-    <h2 class="text-xl font-bold">Burger</h2>
-    <p>$5</p>
-    <a href="detail.html" class="text-blue-500">View</a>
+<!-- MAIN FEATURE -->
+<section class="max-w-6xl mx-auto px-5">
+
+  <div class="relative border bg-white p-4 shadow">
+
+    <!-- IMAGE -->
+    <img src="https://source.unsplash.com/1200x600/?cambodian-food"
+         class="w-full h-400px object-cover">
+
+    <!-- OVERLAY -->
+    <div class="absolute bottom-20 left-0 right-0 text-center">
+      <div class="bg-[#e8dfcf] py-4 text-lg tracking-widest text-gray-700">
+        A LA CARTE
+      </div>
+    </div>
+
+    <!-- BUTTON -->
+    <div class="absolute bottom-4 left-0 right-0 text-center">
+      <button class="bg-green-900 text-white px-6 py-2 text-sm hover:bg-green-800">
+        View Menu
+      </button>
+    </div>
+
   </div>
 
-  <div class="border p-5 rounded">
-    <h2 class="text-xl font-bold">Pizza</h2>
-    <p>$8</p>
+</section>
+
+<!-- MENU CARDS -->
+<section class="max-w-6xl mx-auto px-5 py-10 grid md:grid-cols-3 gap-6">
+
+  <!-- CARD 1 -->
+  <div class="border bg-white shadow group hover:shadow-lg transition">
+
+    <div class="overflow-hidden">
+      <img src="https://source.unsplash.com/400x300/?breakfast"
+           class="w-full h-60 object-cover group-hover:scale-110 transition duration-500">
+    </div>
+
+    <div class="bg-[#e8dfcf] text-center py-6">
+      <h3 class="tracking-widest text-gray-700">BREAKFAST</h3>
+
+      <button class="mt-4 bg-green-900 text-white px-5 py-2 text-sm hover:bg-green-800">
+        View Menu
+      </button>
+    </div>
+
   </div>
 
-</div>
+  <!-- CARD 2 -->
+  <div class="border bg-white shadow group hover:shadow-lg transition">
 
+    <div class="overflow-hidden">
+      <img src="https://source.unsplash.com/400x300/?lunch"
+           class="w-full h-60 object-cover group-hover:scale-110 transition duration-500">
+    </div>
+
+    <div class="bg-[#e8dfcf] text-center py-6">
+      <h3 class="tracking-widest text-gray-700">BUSINESS LUNCH</h3>
+
+      <button class="mt-4 bg-green-900 text-white px-5 py-2 text-sm hover:bg-green-800">
+        View Menu
+      </button>
+    </div>
+
+  </div>
+
+  <!-- CARD 3 -->
+  <div class="border bg-white shadow group hover:shadow-lg transition">
+
+    <div class="overflow-hidden">
+      <img src="https://source.unsplash.com/400x300/?fine-dining"
+           class="w-full h-60 object-cover group-hover:scale-110 transition duration-500">
+    </div>
+
+    <div class="bg-[#e8dfcf] text-center py-6">
+      <h3 class="tracking-widest text-gray-700">HIGHLIGHTS</h3>
+
+      <button class="mt-4 bg-green-900 text-white px-5 py-2 text-sm hover:bg-green-800">
+        View Menu
+      </button>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- APP SECTION -->
+<section class="bg-white py-10">
+  <div class="max-w-6xl mx-auto px-5 flex flex-col md:flex-row items-center gap-6">
+
+    <!-- Phone Image -->
+    <img src="https://source.unsplash.com/200x400/?phone,app" class="w-32">
+
+    <!-- Text -->
+    <div class="flex-1">
+      <h2 class="text-2xl font-semibold">Thalias App</h2>
+      <p class="text-gray-600 mt-2">
+        To unlock exclusive privileges and benefits offered by Thalias,
+        simply download and install the app.
+      </p>
+    </div>
+
+    <!-- Buttons -->
+    <div class="flex gap-3">
+      <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" class="h-10">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" class="h-10">
+    </div>
+
+  </div>
+</section>
+
+<!-- OPENING HOURS -->
+<section class="text-center py-10">
+  <div class="bg-white inline-block px-8 py-6 shadow rounded">
+    <h3 class="text-lg font-semibold">Opening Hour</h3>
+    <p class="text-gray-600 mt-2">
+      Monday to Sunday <br> 6:30 am – 10:30 pm
+    </p>
+  </div>
+</section>
+
+<!-- LOCATIONS -->
+<section class="max-w-6xl mx-auto px-5 py-10 grid md:grid-cols-3 gap-6 text-center">
+
+  <div>
+    <h4 class="font-semibold">Malis Phnom Penh</h4>
+    <p class="text-sm text-gray-600 mt-2">
+      No. 136 Norodom Blvd, Phnom Penh, Cambodia
+    </p>
+    <p class="text-sm text-gray-600">+855 (0)15 814 888</p>
+  </div>
+
+  <div>
+    <h4 class="font-semibold">Malis Siem Reap</h4>
+    <p class="text-sm text-gray-600 mt-2">
+      Pokambor Avenue, Riverside, Cambodia
+    </p>
+    <p class="text-sm text-gray-600">+855 (0)15 824 888</p>
+  </div>
+
+  <div>
+    <h4 class="font-semibold">Malis KTI</h4>
+    <p class="text-sm text-gray-600 mt-2">
+      Inside Techo International Airport
+    </p>
+    <p class="text-sm text-gray-600">+855 (0)15 416 888</p>
+  </div>
+
+</section>
 </body>
-
 </html>
