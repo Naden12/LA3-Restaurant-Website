@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurant</title>
+    <title>LA3 Restaurant</title>
     <link rel="stylesheet" href="src/output.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -11,12 +11,22 @@
 
 <!-- Navbar -->
 <nav class="flex justify-between p-5 shadow  text-black">
-  <h1 class="text-xl font-bold"> My Restaurant</h1>
+  <h1 class="text-xl font-bold"> LA3 Restaurant</h1>
   <div class="space-x-4">
     <a href="index.html">Home</a>
     <a href="menu.html">Menu</a>
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
+    <div class="container">
+        <!-- lightmode -->
+        <button class="border p-1 rounded-2xl after:content-['🌞'] cursor-pointer " onclick="LightModeAction()">
+            
+        </button>
+        <!-- darkmode -->
+        <button class="border p-1 rounded-2xl after:content-['🌚'] cursor-pointer" onclick="DarkModeAction()">
+            
+        </button>
+  </div>
   </div>
 </nav>
 <section class="bg-white py-3">
@@ -234,4 +244,28 @@
 </body>
 
 </body>
+<script>
+    // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+    document.documentElement.classList.toggle(
+        "dark",
+        localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches),
+    );
+
+    // function for darkmode
+    function DarkModeAction() {
+        window.location.reload();
+        document.documentElement.classList.add = "light";
+        localStorage.theme = "dark";
+    }
+
+    // function for lightmode
+    function LightModeAction() {
+        window.location.reload();
+        document.documentElement.classList.remove = "dark";
+        localStorage.theme = "light";
+    }
+
+</script>
 </html> 
