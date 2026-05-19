@@ -11,12 +11,23 @@
 <body class="bg-[#f4f4f4] font-sans">
 <!-- Navbar -->
 <nav class="flex justify-between p-5 shadow  text-black">
-  <h1 class="text-xl font-bold"> LA3 Restaurant</h1>
+  <img src="photo/logo.png" class="w-32">
+ 
   <div class="space-x-4">
     <a href="index.html">Home</a>
     <a href="menu.html">Menu</a>
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
+    <div class="container">
+        <!-- lightmode -->
+        <button class="border p-1 rounded-2xl after:content-['💡'] cursor-pointer " onclick="LightModeAction()">
+            
+        </button>
+        <!-- darkmode -->
+        <button class="border p-1 rounded-2xl after:content-['🌑'] cursor-pointer" onclick="DarkModeAction()">
+            
+        </button>
+  </div>
   </div>
 </nav>
 <!-- TITLE -->
@@ -175,4 +186,28 @@
 
 </section>
 </body>
+<script>
+    // On page load or when changing themes, best to add inline in `head`to avoid FOUC
+    document.documentElement.classList.toggle(
+        "dark",
+        localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches),
+    );
+
+    // function for darkmode
+    function DarkModeAction() {
+        window.location.reload();
+        document.documentElement.classList.add = "light";
+        localStorage.theme = "dark";
+    }
+
+    // function for lightmode
+    function LightModeAction() {
+        window.location.reload();
+        document.documentElement.classList.remove = "dark";
+        localStorage.theme = "light";
+    }
+
+</script>
 </html>
